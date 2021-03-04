@@ -84,6 +84,7 @@ var streamServer = http.createServer( function(request, response) {
 		request.socket.recording = fs.createWriteStream(path);
 	}
 })
+
 // Keep the socket open for streaming
 streamServer.headersTimeout = 0;
 streamServer.listen(STREAM_PORT);
