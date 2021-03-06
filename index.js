@@ -24,10 +24,10 @@ app.get('/', (req, res) => {
     console.log("post received");
 
     ssh.connect({
-      host: 'proxy19.rt3.io',
+      host: 'proxy22.rt3.io',
       username: 'pi',
       password: 'admin',
-      port: 38863
+      port: 33178
     })
     /*
      Or
