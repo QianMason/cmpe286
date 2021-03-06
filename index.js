@@ -21,8 +21,6 @@ app.get('/', (req, res) => {
   console.log("get request")
 })
 .post('/', (req, res) => {
-    res.header("Access-Control-Allow-Origin", "*");
-    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
     console.log("post received");
 
     ssh.connect({
