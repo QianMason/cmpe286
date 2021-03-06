@@ -26,9 +26,10 @@ app.get('/', (req, res) => {
     console.log("post received");
 
     ssh.connect({
-      host: 'localhost',
-      username: 'steel',
-      privateKey: '/home/steel/.ssh/id_rsa'
+      host: 'proxy19.rt3.io',
+      username: 'pi',
+      password: 'admin',
+      port: 38863
     })
     /*
      Or
@@ -41,14 +42,13 @@ app.get('/', (req, res) => {
      */
     .then(function() {
       // Local, Remote
-      ssh.execCommand('python motor.py', { cwd:'/documents/' }).then(function(result) {
+      ssh.execCommand('python motor.py', { cwd:'/home/pi/Documents/' }).then(function(result) {
           
           // response.writeHead(200);
           // response.write('hello');
           
           // response.end();
       }).catch(() =>{
-        console.log(error);
           // response.writeHead(404);
           // response.write('goodbye');
           // response.end();
@@ -56,10 +56,6 @@ app.get('/', (req, res) => {
       )
       
       // With streaming stdout/stderr callbacks
-    }).catch(() => {
-      // response.writeHead(500);
-      // response.write("Bad");
-      // response.end();
     })
 
     res.send("Thank you.");
