@@ -20,7 +20,7 @@ app.get('/', (req, res) => {
   res.send('Hello World');
   console.log("get request")
 })
-.post('/dispense', (req, res) => {
+.post('/', (req, res) => {
     res.header("Access-Control-Allow-Origin", "*");
     res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
     console.log("post received");
