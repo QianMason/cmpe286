@@ -12,3 +12,20 @@
   #dispenseFood:hover{
       background-color: #2ecc71;
   }
+
+  #selectTime {
+    color: white;
+    text-align: center;
+    padding: 20px 60px;
+    outline: none;
+    background-color: #27ae60;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 9px #95a5a6
+  }
+
+  #selectTime:hover{
+      background-color: #2ecc71;
+  }
+
+  
